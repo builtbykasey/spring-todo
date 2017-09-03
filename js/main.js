@@ -13,6 +13,23 @@ function deleteTask() {
   parent.removeChild(task);
 }
 
+function completeTask() {
+  var task = this.parentNode.parentNode;
+  var parent = task.parentNode;
+  var id = parent.id;
+
+  if (id === 'todo') {
+    target = document.getElementById('completed');
+  } else {
+    target = document.getElementById('todo');
+  }
+
+  parent.removeChild(task);
+  target.insertBefore(task, target.childNodes[0]);
+
+
+}
+
 function addTask(text) {
   var list = document.getElementById('todo');
 
@@ -28,7 +45,15 @@ function addTask(text) {
 
   deleteButton.addEventListener('click', deleteTask)
 
+  var completeButton = document.createElement('button');
+  completeButton.classList.add('delete');
+  completeButton.innerHTML = 'Complete';
+
+  completeButton.addEventListener('click', completeTask)
+
+
   buttons.appendChild(deleteButton);
+  buttons.appendChild(completeButton);
   task.appendChild(buttons);
 
   list.insertBefore(task, list.childNodes[0]);
