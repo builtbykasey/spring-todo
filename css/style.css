@@ -26,3 +26,19 @@ header {
 #add-button {
   display: none;
 }
+
+.task-lists li {
+  list-style: none;
+}
+
+.buttons {
+  display: inline;
+}
+
+i.fa-times {
+  display: none;
+}
+
+ .task-lists li:hover .fa-times {
+  display: inline;
+}

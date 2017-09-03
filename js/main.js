@@ -39,31 +39,80 @@ function completeTask() {
   target.insertBefore(task, target.childNodes[0]);
 }
 
-function addTaskToDOM(text) {
+function addTaskToDOM(item) {
   var list = document.getElementById('todo');
-
   var task = document.createElement('li');
-  task.innerText = text;
-
-  var buttons = document.createElement('div');
-  buttons.classList.add('buttons');
-
+  // task.innerText = text;
+  var div = document.createElement('div');
+  // buttons.classList.add('buttons');
+  var completeButton = document.createElement('button');
+  completeButton.classList.add('complete');
+  var taskText = document.createElement('span');
   var deleteButton = document.createElement('button');
   deleteButton.classList.add('delete');
-  deleteButton.innerHTML = 'Delete';
+
+  var iDelete = document.createElement('i');
+  iDelete.classList.add('fa');
+  iDelete.classList.add('fa-times');
 
   deleteButton.addEventListener('click', deleteTask)
 
-  var completeButton = document.createElement('button');
-  completeButton.classList.add('delete');
-  completeButton.innerHTML = 'Complete';
+
+
+  var iComplete = document.createElement('i');
+  iComplete.classList.add('fa');
+  iComplete.classList.add('fa-check');
 
   completeButton.addEventListener('click', completeTask)
 
 
-  buttons.appendChild(deleteButton);
-  buttons.appendChild(completeButton);
-  task.appendChild(buttons);
+  taskText.appendChild(document.createTextNode(item));
+
+  div.appendChild(completeButton);
+  completeButton.appendChild(iComplete);
+
+  div.appendChild(taskText);
+  div.appendChild(deleteButton);
+  deleteButton.appendChild(iDelete);
+
+  task.appendChild(div);
 
   list.insertBefore(task, list.childNodes[0]);
 }
+
+// function addTaskToDOM(text) {
+//   var list = document.getElementById('todo');
+//
+//   var task = document.createElement('li');
+//   task.innerText = text;
+//
+//   var buttons = document.createElement('div');
+//   buttons.classList.add('buttons');
+//
+//   var deleteButton = document.createElement('button');
+//   deleteButton.classList.add('delete');
+//
+//   var iDelete = document.createElement('i');
+//   iDelete.classList.add('fa');
+//   iDelete.classList.add('fa-times');
+//
+//   deleteButton.addEventListener('click', deleteTask)
+//
+//   var completeButton = document.createElement('button');
+//   completeButton.classList.add('complete');
+//
+//   var iComplete = document.createElement('i');
+//   iComplete.classList.add('fa');
+//   iComplete.classList.add('fa-check');
+//
+//   completeButton.addEventListener('click', completeTask)
+//
+//
+//   buttons.appendChild(deleteButton);
+//   deleteButton.appendChild(iDelete);
+//   buttons.appendChild(completeButton);
+//   completeButton.appendChild(iComplete);
+//   task.appendChild(buttons);
+//
+//   list.insertBefore(task, list.childNodes[0]);
+// }
