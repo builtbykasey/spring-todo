@@ -2,9 +2,20 @@ document.getElementById('add-button').addEventListener('click', function() {
   var value = document.getElementById('task-input').value;
   if (value) {
     addTask(value);
-    document.getElementById('task-input').value = '';
   }
 });
+
+document.getElementById('task-input').addEventListener('keydown', function (event) {
+  var value = this.value;
+  if (event.code === 'Enter' && value) {
+    addTask(value);
+  }
+});
+
+function addTask(value) {
+  addTaskToDOM(value);
+  document.getElementById('task-input').value = '';
+}
 
 function deleteTask() {
   var task = this.parentNode.parentNode;
@@ -26,11 +37,9 @@ function completeTask() {
 
   parent.removeChild(task);
   target.insertBefore(task, target.childNodes[0]);
-
-
 }
 
-function addTask(text) {
+function addTaskToDOM(text) {
   var list = document.getElementById('todo');
 
   var task = document.createElement('li');
