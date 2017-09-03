@@ -1,3 +1,28 @@
+body, input, button, * {
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  margin: .8rem .0 5rem 1rem;
+  font-weight: bold;
+}
+
+.name {
+  font-size: 2rem;
+  color: #13ace5;
+  margin-right: .5rem;
+}
+
+.name-todo {
+  color: black;
+}
+
+.logo {
+  height: 30px;
+}
+
 #add-button {
   display: none;
 }
