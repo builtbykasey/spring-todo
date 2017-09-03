@@ -1,9 +1,9 @@
-document.getElementById('add-button').addEventListener('click', function() {
-  var value = document.getElementById('task-input').value;
-  if (value) {
-    addTask(value);
-  }
-});
+// document.getElementById('add-button').addEventListener('click', function() {
+//   var value = document.getElementById('task-input').value;
+//   if (value) {
+//     addTask(value);
+//   }
+// });
 
 document.getElementById('task-input').addEventListener('keydown', function (event) {
   var value = this.value;

@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SpringToDo</title>
+    <!-- Compressed Foundation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <input type="text" placeholder="Task" id="task-input">
-    <button id="add-button">Add</button>
+    <input type="text" placeholder="What needs to get done?" id="task-input">
+    <button id="add-button"></button>
 
     <div class="container">
       <ul class="todo" id="todo"></ul>
@@ -15,6 +19,16 @@
       <ul class="completed" id="completed"></ul>
     </div>
 
+    <!-- jQuery CDN -->
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <!-- Foundation JavaScript CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
