@@ -8,17 +8,21 @@ Modern and intuitive design for unleashing your productivity.
 
 ## Project Objectives
 
-- Add/Remove tasks
 - Single page
+- Add/Remove tasks
+- Mark tasks completed
+- Unmark tasks completed, return task to Todo list
 - Modal popup when 5 tasks added
+- Modal popup when 5 tasks completed
 - Use Zurb Foundation
 - Use Git for version control
 - Responsive
 
-## Design Decisions
+## Design Goals
 
-- Intuitive & clean design, no need for words/instructions
-- 
+- Intuitive & clean design
+- Least amount of words/instructions possible
+- Color combination colorful but professional
 
 ## Built With:
 
