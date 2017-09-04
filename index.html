@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <div class="gradient">
     <header>
       <span class="name">Spring<span class="name-todo">ToDo</span></span>
       <img class="logo" src="images/springtodo-logo2.png">
@@ -21,7 +20,7 @@
     <div class="grid-container">
       <div class="grid-x grid-padding-x align-center">
         <div class="large-5 cell list-container">
-          <input type="text" placeholder="What needs to get done?" id="task-input">
+          <input type="text" placeholder="What do you need todo?" id="task-input">
           <button id="add-button"></button>
 
           <div class="task-lists">
@@ -33,7 +32,14 @@
       </div>
     </div>
 
-  </div>
+    <div class="reveal" id="todo-modal" data-reveal>
+      <h1>Congratulations</h1>
+      <p class="lead">You've added 5 tasks to your todo list, now go spring into action!</p>
+      <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
 
     <script src="https://use.fontawesome.com/fd30ea7aae.js"></script>
     <!-- jQuery CDN -->

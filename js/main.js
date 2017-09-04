@@ -1,3 +1,10 @@
+var data = (localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem('todoList')):{
+  todo: [],
+  completed: []
+};
+
+renderTodoList();
+
 // document.getElementById('add-button').addEventListener('click', function() {
 //   var value = document.getElementById('task-input').value;
 //   if (value) {
@@ -9,17 +16,57 @@ document.getElementById('task-input').addEventListener('keydown', function (even
   var value = this.value;
   if (event.code === 'Enter' && value) {
     addTask(value);
+    console.log(data.todo.length);
+
+    todoModal();
   }
 });
+
+function renderTodoList() {
+  if (!data.todo.length && !data.completed.length) return;
+
+  for (var i = 0; i < data.todo.length; i++) {
+    var value = data.todo[i];
+    addTaskToDOM(value);
+  }
+
+  for (var j = 0; j < data.completed.length; j++) {
+    var value = data.completed[j];
+    addTaskToDOM(value, true);
+  }
+
+}
+
+function updateLocalStorage() {
+  localStorage.setItem('todoList', JSON.stringify(data));
+}
+
+function todoModal() {
+  if (data.todo.length === 5) {
+    $('#todo-modal').foundation('open');
+  }
+}
 
 function addTask(value) {
   addTaskToDOM(value);
   document.getElementById('task-input').value = '';
+
+  data.todo.push(value);
+  updateLocalStorage();
 }
 
 function deleteTask() {
   var task = this.parentNode.parentNode.parentNode;
   var parent = task.parentNode;
+  var id = parent.id;
+  var value = task.innerText;
+
+  if (id === 'todo') {
+    data.todo.splice(data.todo.indexOf(value), 1);
+  } else {
+    data.completed.splice(data.completed.indexOf(value), 1);
+  }
+  updateLocalStorage();
 
   parent.removeChild(task);
 }
@@ -28,19 +75,25 @@ function completeTask() {
   var task = this.parentNode.parentNode.parentNode;
   var parent = task.parentNode;
   var id = parent.id;
+  var value = task.innerText;
 
   if (id === 'todo') {
-    target = document.getElementById('completed');
+    data.todo.splice(data.todo.indexOf(value), 1);
+    data.completed.push(value);
   } else {
-    target = document.getElementById('todo');
+    data.completed.splice(data.completed.indexOf(value), 1);
+    data.todo.push(value);
   }
+  updateLocalStorage();
+
+  var target = (id === 'todo') ? document.getElementById('completed'):document.getElementById('todo');
 
   parent.removeChild(task);
   target.insertBefore(task, target.childNodes[0]);
 }
 
-function addTaskToDOM(item) {
-  var list = document.getElementById('todo');
+function addTaskToDOM(item, completed) {
+  var list = (completed) ? document.getElementById('completed'):document.getElementById('todo');
   var task = document.createElement('li');
   var taskContent = document.createElement('div');
   taskContent.classList.add('task-content');

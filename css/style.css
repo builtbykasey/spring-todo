@@ -152,3 +152,7 @@ i.fa-times {
 .task-lists li:hover .fa-times {
   display: inline;
 }
+
+#todo-modal {
+  color: #0096F4;
+}
