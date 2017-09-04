@@ -58,7 +58,7 @@ header {
 }
 
 #task-input {
-  padding: 1.5rem .5rem;
+  /*padding: 1.5rem .5rem;*/
   margin: 1rem 0 1rem 0;
   border: none;
   border-radius: 5px;
@@ -257,6 +257,40 @@ i.fa-times {
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  button.complete, button.complete:hover, button.complete:active, button.complete:focus {
+    padding: .15rem;
+    margin: 0 9px 0 0;
+    border: 1px solid #0096F4;
+    border-radius: 5px;
+    color: #0096F4;
+    background: transparent;
+    font-size: 1rem;
+    opacity: 1;
+    outline: none;
+
+    -webkit-transition-property: none;
+    transition-property: none;
+  }
+
+  button.delete {
+    font-size: .85rem;
+    opacity: .3;
+  }
+
+  i.fa-times {
+    color: gray;
+  }
+
+  .task-lists li:hover .fa-times {
+    color: gray;
+
+    -webkit-transition-property: none;
+    transition-property: none;
+  }
+}
+
+/* Large only Custom */
+@media screen and (min-width: 64em) and (max-width: 71em) {
   button.complete, button.complete:hover, button.complete:active, button.complete:focus {
     padding: .15rem;
     margin: 0 9px 0 0;
