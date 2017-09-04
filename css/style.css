@@ -49,13 +49,13 @@ header {
 .list-container {
   margin-bottom: 5rem;
   border-radius: 5px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.2);
   box-shadow: 0 0 4px 4px rgba(0,0,0,.02);
 }
 
 #task-input {
   padding: 1.5rem .5rem;
-  margin-top: 1rem;
+  margin: 1rem 0 1.5rem 0;
   border: none;
   border-radius: 5px;
   background: rgba(0,209,149,0.6);
@@ -148,6 +148,9 @@ button.complete:hover {
   background: #0096F4;
   color: #fff;
   opacity: 1;
+
+  transition: background 0.1s ease-in;
+  transition: color 0.1s ease-in;
 }
 
 #completed button.complete {
@@ -175,28 +178,8 @@ i.fa-times {
 
 .task-lists li:hover .fa-times {
   color: #fff;
-}
 
-#todo:empty:after {
-  /*content: 'Enter a new task to get started';*/
-  margin: 15px 0 0 0;
-}
-
-/*#completed:empty:after {
-  content: 'You have yet to complete any tasks.';
-}*/
-
-/*#completed::before {
-  content: 'Completed';
-}*/
-
-#todo:after,
-#completed:before {
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  color: #aaa;
+  transition: color 0.5s ease-in 0.1s;
 }
 
 #todo-modal {

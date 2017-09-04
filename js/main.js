@@ -16,8 +16,6 @@ document.getElementById('task-input').addEventListener('keydown', function (even
   var value = this.value;
   if (event.code === 'Enter' && value) {
     addTask(value);
-    console.log(data.todo.length);
-
     todoModal();
   }
 });
@@ -34,7 +32,6 @@ function renderTodoList() {
     var value = data.completed[j];
     addTaskToDOM(value, true);
   }
-
 }
 
 function updateLocalStorage() {
@@ -137,47 +134,7 @@ function addTaskToDOM(item, completed) {
   taskContent.appendChild(leftContent);
   taskContent.appendChild(rightContent);
 
-  // taskContent.appendChild(taskText);
-  // taskContent.appendChild(deleteButton);
-
   task.appendChild(taskContent);
 
   list.insertBefore(task, list.childNodes[0]);
 }
-
-// function addTaskToDOM(text) {
-//   var list = document.getElementById('todo');
-//
-//   var task = document.createElement('li');
-//   task.innerText = text;
-//
-//   var buttons = document.createElement('div');
-//   buttons.classList.add('buttons');
-//
-//   var deleteButton = document.createElement('button');
-//   deleteButton.classList.add('delete');
-//
-//   var iDelete = document.createElement('i');
-//   iDelete.classList.add('fa');
-//   iDelete.classList.add('fa-times');
-//
-//   deleteButton.addEventListener('click', deleteTask)
-//
-//   var completeButton = document.createElement('button');
-//   completeButton.classList.add('complete');
-//
-//   var iComplete = document.createElement('i');
-//   iComplete.classList.add('fa');
-//   iComplete.classList.add('fa-check');
-//
-//   completeButton.addEventListener('click', completeTask)
-//
-//
-//   buttons.appendChild(deleteButton);
-//   deleteButton.appendChild(iDelete);
-//   buttons.appendChild(completeButton);
-//   completeButton.appendChild(iComplete);
-//   task.appendChild(buttons);
-//
-//   list.insertBefore(task, list.childNodes[0]);
-// }
