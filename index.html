@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <!-- Compressed Foundation CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"/>
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
@@ -26,18 +27,22 @@
     <div class="grid-container">
       <div class="grid-x grid-padding-x align-center">
         <div class="small-10 medium-7 large-5 cell list-container">
+          <!-- New Task -->
           <input type="text" placeholder="What do you need to do?" id="task-input">
           <button id="add-button"></button>
 
           <div class="task-lists">
+            <!-- Tasks to be done -->
             <ul class="todo" id="todo"></ul>
 
+            <!-- Completed Tasks -->
             <ul class="completed" id="completed"></ul>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Modal when 5 tasks added -->
     <div class="reveal" id="todo-modal" data-reveal>
       <h2>You've added 5 tasks...</h2>
       <h3>Now go spring into action!!!</h3>
@@ -46,6 +51,7 @@
       </button>
     </div>
 
+    <!-- Modal when 5 tasks completed -->
     <div class="reveal" id="completed-modal" data-reveal>
       <h2>Congratulations!</h2>
       <h3>You've completed 5 tasks.</h3>
@@ -54,7 +60,7 @@
       </button>
     </div>
 
-
+    <!-- Font Aweseome -->
     <script src="https://use.fontawesome.com/fd30ea7aae.js"></script>
     <!-- jQuery CDN -->
     <script

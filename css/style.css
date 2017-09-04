@@ -1,3 +1,4 @@
+/* Page setup */
 html {
   height: 100%;
 }
@@ -17,6 +18,7 @@ body, input, button, * {
   font-family: 'Lato', sans-serif;
 }
 
+/* Header */
 header {
   display: flex;
   align-items: baseline;
@@ -40,6 +42,7 @@ header {
   height: 40px;
 }
 
+/* Body */
 .tagline {
   margin-bottom: 1rem;
   color: #fff;
@@ -49,6 +52,7 @@ header {
   text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 }
 
+/* To Do List Container */
 .list-container {
   margin-bottom: 5rem;
   border-radius: 5px;
@@ -58,7 +62,6 @@ header {
 }
 
 #task-input {
-  /*padding: 1.5rem .5rem;*/
   margin: 1rem 0 1rem 0;
   border: none;
   border-radius: 5px;
@@ -97,6 +100,7 @@ header {
   display: none;
 }
 
+/* To Do & Completed Lists */
 .task-lists ul {
   margin: 0;
 }
@@ -110,7 +114,6 @@ header {
   box-shadow: 1px 2px 4px  rgba(0,0,0,.02);
   color: #fff;
   font-size: 1.15rem;
-  /*font-weight: bold;*/
   list-style: none;
 }
 
@@ -126,6 +129,7 @@ header {
   margin-top: 1.5rem;
 }
 
+/* Task buttons and name positioning and style */
 .task-content {
   display: flex;
   align-items: center;
@@ -182,10 +186,12 @@ button.delete {
   outline: none;
 }
 
+/* Delete "x" invisible */
 i.fa-times {
   color: transparent;
 }
 
+/* Delete "x" appear on hover */
 .task-lists li:hover .fa-times {
   color: #fff;
 
@@ -193,6 +199,7 @@ i.fa-times {
   transition: color 0.4s ease-in;
 }
 
+/* Modals */
 #todo-modal {
   color: #0096F4;
   outline: none;
@@ -213,16 +220,22 @@ i.fa-times {
   font-weight: bold;
 }
 
+/* Media Queries */
+
 /* Small only */
 @media screen and (max-width: 39.9375em) {
+
+  /* Header */
   .name {
     font-size: 2rem;
   }
 
+  /* Body */
   .tagline {
     font-size: 1.5rem;
   }
 
+  /* Complete button hover removed */
   button.complete, button.complete:hover, button.complete:active, button.complete:focus {
     padding: .15rem;
     margin: 0 9px 0 0;
@@ -238,6 +251,7 @@ i.fa-times {
     transition-property: none;
   }
 
+  /* Delete "x" always visible */
   button.delete {
     font-size: .85rem;
     opacity: .3;
@@ -254,6 +268,7 @@ i.fa-times {
     transition-property: none;
   }
 
+  /* Modals */
   #todo-modal {
     text-align: left;
   }
@@ -265,6 +280,7 @@ i.fa-times {
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  /* Complete button hover removed */
   button.complete, button.complete:hover, button.complete:active, button.complete:focus {
     padding: .15rem;
     margin: 0 9px 0 0;
@@ -280,6 +296,7 @@ i.fa-times {
     transition-property: none;
   }
 
+  /* Delete "x" always visible */
   button.delete {
     font-size: .85rem;
     opacity: .3;
@@ -299,6 +316,7 @@ i.fa-times {
 
 /* Large only Custom */
 @media screen and (min-width: 64em) and (max-width: 71em) {
+  /* Complete button hover removed */
   button.complete, button.complete:hover, button.complete:active, button.complete:focus {
     padding: .15rem;
     margin: 0 9px 0 0;
@@ -314,6 +332,7 @@ i.fa-times {
     transition-property: none;
   }
 
+  /* Delete "x" always visible */
   button.delete {
     font-size: .85rem;
     opacity: .3;
