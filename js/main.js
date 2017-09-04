@@ -87,6 +87,7 @@ function completeTask() {
   } else {
     data.completed.splice(data.completed.indexOf(value), 1);
     data.todo.push(value);
+    todoModal();
   }
   updateLocalStorage();
 
