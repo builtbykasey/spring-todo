@@ -1,9 +1,13 @@
- html {
+html {
   height: 100%;
 }
 body {
   height: 100%;
   margin: 0;
+  background: -moz-linear-gradient(to top left, #0096F4, #00D195 60%);
+  background: -webkit-linear-gradient(to top left, #0096F4, #00D195 60%);
+  background: -o-linear-gradient(to top left, #0096F4, #00D195 60%);
+  background: -ms-linear-gradient(to top left, #0096F4, #00D195 60%);
   background: linear-gradient(to top left, #0096F4, #00D195 60%);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -33,16 +37,15 @@ header {
 }
 
 .logo {
-  text-align: center;
   height: 40px;
 }
 
 .tagline {
   margin-bottom: 1rem;
-  font-size: 1.8rem;
-  text-align: center;
-  font-weight: bold;
   color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 }
 
@@ -50,6 +53,7 @@ header {
   margin-bottom: 5rem;
   border-radius: 5px;
   background: rgba(255,255,255,0.2);
+  -webkit-box-shadow: 0 0 4px 4px rgba(0,0,0,.02);
   box-shadow: 0 0 4px 4px rgba(0,0,0,.02);
 }
 
@@ -59,11 +63,14 @@ header {
   border: none;
   border-radius: 5px;
   background: rgba(0,209,149,0.6);
-  /*background: rgba(255,255,255,0.3);*/
+  -webkit-box-shadow: none;
   box-shadow: none;
   color: #fff;
   font-size: 1.15rem;
   text-indent: 1px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .list-container input::-webkit-input-placeholder {
@@ -73,14 +80,17 @@ header {
 
 .list-container input:-moz-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
 }
 
 .list-container input::-moz-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
 }
 
 .list-container input:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
 }
 
 #add-button {
@@ -96,11 +106,12 @@ header {
   margin-bottom: .5rem;
   border-radius: 5px;
   background: rgba(255,255,255,0.1);
+  -webkit-box-shadow: 1px 2px 4px  rgba(0,0,0,.02);
+  box-shadow: 1px 2px 4px  rgba(0,0,0,.02);
   color: #fff;
   font-size: 1.15rem;
   /*font-weight: bold;*/
   list-style: none;
-  box-shadow: 1px 2px 4px  rgba(0,0,0,.02);
 }
 
 .task-lists li:last-of-type {
@@ -131,10 +142,6 @@ header {
   align-items: center;
 }
 
-.buttons {
-  display: inline;
-}
-
 button.complete {
   padding: .15rem;
   margin: 0 9px 0 0;
@@ -150,7 +157,9 @@ button.complete:hover {
   color: #fff;
   opacity: 1;
 
+  -webkit-transition: background 0.1s ease-in;
   transition: background 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in;
   transition: color 0.1s ease-in;
 }
 
@@ -169,7 +178,6 @@ button.delete {
   display: flex;
   align-items: center;
   margin-right: 5px;
-  color: gray;
   opacity: .4;
   outline: none;
 }
@@ -181,13 +189,14 @@ i.fa-times {
 .task-lists li:hover .fa-times {
   color: #fff;
 
+  -webkit-transition: color 0.4s ease-in;
   transition: color 0.4s ease-in;
 }
 
 #todo-modal {
   color: #0096F4;
-  text-align: center;
   outline: none;
+  text-align: center;
 }
 
 #todo-modal h3 {
@@ -196,10 +205,86 @@ i.fa-times {
 
 #completed-modal {
   color: #00D195;
-  text-align: center;
   outline: none;
+  text-align: center;
 }
 
 #completed-modal h2 {
   font-weight: bold;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .name {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+  }
+
+  button.complete, button.complete:hover, button.complete:active, button.complete:focus {
+    padding: .15rem;
+    margin: 0 9px 0 0;
+    border: 1px solid #0096F4;
+    border-radius: 5px;
+    color: #0096F4;
+    background: transparent;
+    font-size: 1rem;
+    opacity: 1;
+    outline: none;
+
+    -webkit-transition-property: none;
+    transition-property: none;
+  }
+
+  button.delete {
+    font-size: .85rem;
+    opacity: .3;
+  }
+
+  i.fa-times {
+    color: gray;
+  }
+
+  .task-lists li:hover .fa-times {
+    color: gray;
+
+    -webkit-transition-property: none;
+    transition-property: none;
+  }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  button.complete, button.complete:hover, button.complete:active, button.complete:focus {
+    padding: .15rem;
+    margin: 0 9px 0 0;
+    border: 1px solid #0096F4;
+    border-radius: 5px;
+    color: #0096F4;
+    background: transparent;
+    font-size: 1rem;
+    opacity: 1;
+    outline: none;
+
+    -webkit-transition-property: none;
+    transition-property: none;
+  }
+
+  button.delete {
+    font-size: .85rem;
+    opacity: .3;
+  }
+
+  i.fa-times {
+    color: gray;
+  }
+
+  .task-lists li:hover .fa-times {
+    color: gray;
+
+    -webkit-transition-property: none;
+    transition-property: none;
+  }
 }
