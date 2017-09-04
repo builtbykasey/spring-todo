@@ -73,22 +73,22 @@ header {
   -moz-appearance: none;
 }
 
-.list-container input::-webkit-input-placeholder {
+#task-input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
   font-style: italic;
 }
 
-.list-container input:-moz-input-placeholder {
+#task-input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.75);
   font-style: italic;
 }
 
-.list-container input::-moz-input-placeholder {
+#task-input:-moz-placeholder {
   color: rgba(255, 255, 255, 0.75);
   font-style: italic;
 }
 
-.list-container input:-ms-input-placeholder {
+#task-input:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
   font-style: italic;
 }
