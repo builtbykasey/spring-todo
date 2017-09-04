@@ -2,7 +2,7 @@
 
 ### Todo List App
 
-Modern and intuitive design for unleashing your productivity.
+Modern and intuitive todo list for unleashing your productivity.
 
 ### [Live Site](https://kaseycolleen.github.io/spring-todo/)
 
