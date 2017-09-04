@@ -244,14 +244,22 @@ i.fa-times {
   }
 
   i.fa-times {
-    color: gray;
+    color: #fff;
   }
 
   .task-lists li:hover .fa-times {
-    color: gray;
+    color: #fff;
 
     -webkit-transition-property: none;
     transition-property: none;
+  }
+
+  #todo-modal {
+    text-align: left;
+  }
+
+  #completed-modal {
+    text-align: left;
   }
 }
 
@@ -278,11 +286,11 @@ i.fa-times {
   }
 
   i.fa-times {
-    color: gray;
+    color: #fff;
   }
 
   .task-lists li:hover .fa-times {
-    color: gray;
+    color: #fff;
 
     -webkit-transition-property: none;
     transition-property: none;
@@ -312,11 +320,11 @@ i.fa-times {
   }
 
   i.fa-times {
-    color: gray;
+    color: #fff;
   }
 
   .task-lists li:hover .fa-times {
-    color: gray;
+    color: #fff;
 
     -webkit-transition-property: none;
     transition-property: none;
