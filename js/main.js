@@ -47,6 +47,12 @@ function todoModal() {
   }
 }
 
+function completedModal() {
+  if (data.completed.length === 5) {
+    $('#completed-modal').foundation('open');
+  }
+}
+
 function addTask(value) {
   addTaskToDOM(value);
   document.getElementById('task-input').value = '';
@@ -80,6 +86,7 @@ function completeTask() {
   if (id === 'todo') {
     data.todo.splice(data.todo.indexOf(value), 1);
     data.completed.push(value);
+    completedModal();
   } else {
     data.completed.splice(data.completed.indexOf(value), 1);
     data.todo.push(value);
