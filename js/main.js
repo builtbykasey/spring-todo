@@ -14,7 +14,8 @@ renderTodoList();
 
 document.getElementById('task-input').addEventListener('keydown', function (event) {
   var value = this.value;
-  if (event.code === 'Enter' && value) {
+  console.log(event);
+  if (event.keyCode === 13 && value) {
     addTask(value);
     todoModal();
   }
