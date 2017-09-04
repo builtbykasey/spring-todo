@@ -17,28 +17,39 @@ header {
   display: flex;
   align-items: baseline;
   padding-top: .8rem;
-  margin: 0 0 5rem 1rem;
+  margin: 0 0 3rem 1rem;
   font-weight: bold;
 }
 
 .name {
   margin-right: .5rem;
   color: #0096F4;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .name-todo {
   color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 }
 
 .logo {
-  height: 30px;
+  text-align: center;
+  height: 40px;
+}
+
+.tagline {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 }
 
 .list-container {
   margin-bottom: 5rem;
   border-radius: 5px;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
   box-shadow: 0 0 4px 4px rgba(0,0,0,.02);
 }
 
@@ -81,10 +92,10 @@ header {
 }
 
 .task-lists li {
-  padding: .75rem .5rem;
-  margin-bottom: .4rem;
+  padding: .75rem 10px;
+  margin-bottom: .5rem;
   border-radius: 5px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.1);
   color: #fff;
   font-size: 1.15rem;
   /*font-weight: bold;*/
@@ -126,7 +137,7 @@ header {
 
 button.complete {
   padding: .15rem;
-  margin: 0 7px 0 0;
+  margin: 0 9px 0 0;
   border: 1px solid #0096F4;
   border-radius: 5px;
   color: #0096F4;
@@ -155,15 +166,15 @@ button.delete {
   align-items: center;
   margin-right: 5px;
   color: gray;
-  opacity: .2;
+  opacity: .4;
 }
 
 i.fa-times {
-  display: none;
+  color: transparent;
 }
 
 .task-lists li:hover .fa-times {
-  display: inline;
+  color: #fff;
 }
 
 #todo:empty:after {
