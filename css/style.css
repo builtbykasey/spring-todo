@@ -1,3 +1,14 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to top left, #0096F4, #00D195 60%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 body, input, button, * {
   font-family: 'Lato', sans-serif;
 }
@@ -5,40 +16,139 @@ body, input, button, * {
 header {
   display: flex;
   align-items: baseline;
-  margin: .8rem .0 5rem 1rem;
+  padding-top: .8rem;
+  margin: 0 0 5rem 1rem;
   font-weight: bold;
 }
 
 .name {
-  font-size: 2rem;
-  color: #13ace5;
   margin-right: .5rem;
+  color: #0096F4;
+  font-size: 2rem;
 }
 
 .name-todo {
-  color: black;
+  color: #fff;
 }
 
 .logo {
   height: 30px;
 }
 
+.list-container {
+  margin-bottom: 5rem;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.3);
+}
+
+#task-input {
+  padding: 1.5rem .5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.3);
+  box-shadow: none;
+  color: #fff;
+  font-size: 1.15rem;
+  text-indent: 1px;
+}
+
+.list-container input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.list-container input:-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.list-container input::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.list-container input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 #add-button {
   display: none;
 }
 
+.task-lists ul {
+  margin: 0;
+}
+
 .task-lists li {
+  padding: .75rem .5rem;
+  margin-bottom: .25rem;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1.15rem;
   list-style: none;
+}
+
+.task-lists li:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
 }
 
 .buttons {
   display: inline;
 }
 
+button.complete {
+  padding: .15rem;
+  margin: 0 7px 0 0;
+  border: 1px solid #0096F4;
+  border-radius: 5px;
+  color: #0096F4;
+  font-size: 1rem;
+}
+
+button.complete:hover {
+  background: #0096F4;
+  color: #fff;
+  opacity: 1;
+}
+
+#completed button.complete {
+  background: #0096F4;
+  color: #fff;
+  opacity: 1;
+}
+
+#completed span {
+  opacity: .6;
+  text-decoration: line-through;
+}
+
+button.delete {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  color: gray;
+  opacity: .2;
+}
+
 i.fa-times {
   display: none;
 }
 
- .task-lists li:hover .fa-times {
+.task-lists li:hover .fa-times {
   display: inline;
 }
