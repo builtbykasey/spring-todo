@@ -176,7 +176,6 @@ button.complete:hover {
 #completed button.complete {
   background: #0096F4;
   color: #fff;
-  opacity: .6;
 }
 
 #completed span {
