@@ -1,10 +1,8 @@
 # SpringTodo
 
-### Todo List App
+### [Visit Site](https://kaseycolleen.github.io/spring-todo/)
 
 Modern and intuitive todo list for unleashing your productivity.
-
-### [Live Site](https://kaseycolleen.github.io/spring-todo/)
 
 ## Project Features
 
