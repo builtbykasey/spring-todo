@@ -1,6 +1,6 @@
 # SpringTodo
 
-### [Visit Site](https://kaseycolleen.github.io/spring-todo/)
+### [Visit Site](https://builtbykasey.github.io/spring-todo/)
 
 Modern and intuitive todo list for unleashing your productivity.
 
